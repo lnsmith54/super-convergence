@@ -1,0 +1,30 @@
+net: "examples/superconvergence/architectures/arch.prototxt"
+#net: "examples/superconvergence/architectures/Resnet56Cifar.prototxt"
+#net: "examples/superconvergence/architectures/Resnet110Cifar.prototxt"
+#
+#net: "examples/superconvergence/architectures/CifarResNet-56.prototxt"
+#net: "examples/superconvergence/architectures/Resnet56Dropout.prototxt"
+#net: "examples/superconvergence/architectures/Resnet56Cifar-mod.prototxt"
+#net: "examples/superconvergence/architectures/Resnet56Cifar_changeBatchNorm.prototxt"
+#net: "examples/superconvergence/architectures/Resnet56Cifar_changePooling.prototxt"
+#net: "examples/superconvergence/architectures/bottleneckResnet56.prototxt"
+#net: "examples/superconvergence/architectures/resnet20bn.prototxt"
+#net: "examples/superconvergence/architectures/ResNeXt56.prototxt"
+#net: "examples/superconvergence/architectures/Resnet20Cifar.prototxt"
+
+test_iter: 200
+test_interval: 100
+display: 100
+base_lr: 0.35 
+max_iter: 80000 
+lr_policy: "multistep" 
+gamma: 0.1
+momentum: 0.9
+weight_decay: 1e-4
+snapshot: 100000
+snapshot_prefix: "examples/superconvergence/snapshots/lr35Fig1a"
+solver_mode: GPU
+stepvalue: 50000
+stepvalue: 70000
+#type:  "Adam" #  "AdaDelta"  # "AdaGrad"  # "Nesterov" # "RMSProp" #
+
