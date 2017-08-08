@@ -1,7 +1,14 @@
 # super-convergence
 
+Here are the Caffe files of our recent work, "Super-Convergence: Very Fast Training of Residual Networks Using Large Learning Rates". Please check the paper for details.  
+
+Note: if you have a better theoretical understanding of the cause for super-convergence than the ones described in the paper, please contact leslie.smith@nrl.navy.mil about a collaboration on a follow up paper.
+
+Instructions:
+
 From caffe home directory:
 ./build/tools/caffe train --solver=$SOLVER -gpu=all
+
 
 As provided, this solver file trains the CLR network from Figure 1a. Changes must be made to reproduce other experiments, as listed below. 
 
@@ -178,12 +185,6 @@ As provided, this solver file trains the CLR network from Figure 1a. Changes mus
 			max_iter: 20000
 
 	Fig. 7a:
-		(no longer relevant due to changing of how we use batch norm)
-
-	Fig. 7b:
-		(no longer relevant due to changing of how we use batch norm)
-
-	Fig. 8a:
 	dataset used by network must be changed to CIFAR-100
 	$SOLVER should be the provided "lrRangeSolver.prototxt". 
 		Single network:
@@ -194,7 +195,7 @@ As provided, this solver file trains the CLR network from Figure 1a. Changes mus
 			stepsize: 20000
 			max_iter: 20000
 
-	Fig. 8b:
+	Fig. 7b:
 	dataset used by network must be changed to CIFAR-100
 		LR=0.35:
 		$SOLVER should be the provided "solver.prototxt". 
@@ -214,7 +215,7 @@ As provided, this solver file trains the CLR network from Figure 1a. Changes mus
 			stepsize: 5000
 			max_iter: 10000
 		
-	Fig. 9a:
+	Fig. 8a:
 	$SOLVER should be the provided "solver.prototxt". 
 		LR=0.35:
 		All use solver settings from LR=0.35 in Fig. 1a, but with solver type changed.
@@ -223,7 +224,7 @@ As provided, this solver file trains the CLR network from Figure 1a. Changes mus
 			type: "AdaGrad"  and remove momentum
 			type: "Adam"     and base_lr:  0.0035
 
-	Fig. 9b:
+	Fig. 8b:
 		LR=0.35:
 		$SOLVER should be the provided "solver.prototxt". 
 		Same solver settings as Fig. 9a, but with:
@@ -233,19 +234,19 @@ As provided, this solver file trains the CLR network from Figure 1a. Changes mus
 		Same solver settings as Fig. 1a, but with:
 			type: "Nesterov"
 
-	Fig. 10a:
+	Fig. 9a:
 		Same solver settings as CLR=0.1-3.0 in Fig. 1a, but with batchSize changed within architecture.
 		
-	Fig. 10b:
+	Fig. 9b:
 		Same solver settings as CLR=0.1-3.0 in Fig. 1a, but with dropout ratio changed within architecture.
 
-	Fig. 11a:
+	Fig. 10a:
 		Same solver settings as CLR=0.1-3.0 in Fig. 1a, but with momentum changed.
 		
-	Fig. 11b:
+	Fig. 10b:
 		Same solver settings as CLR=0.1-3.0 in Fig. 1a, but with weight_decay changed.
 		
-	Fig. 12a:
+	Fig. 11a:
 	$SOLVER should be the provided "clrsolver.prototxt". 
 		Single network:
 			net: ".../bottleneckResnet56.prototxt"
@@ -255,7 +256,7 @@ As provided, this solver file trains the CLR network from Figure 1a. Changes mus
 			stepsize: 50000
 			max_iter: 50000
 
-	Fig. 12b:
+	Fig. 11b:
 	$SOLVER should be the provided "clrsolver.prototxt". 
 		Single network:
 			net: ".../ResNeXt56.prototxt"
