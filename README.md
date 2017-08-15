@@ -1,6 +1,6 @@
 # super-convergence
 
-Here are the Caffe files of our recent work, "Super-Convergence: Very Fast Training of Residual Networks Using Large Learning Rates". Please check the paper for details.  
+Here are the Caffe files of our recent work, "Super-Convergence: Very Fast Training of Residual Networks Using Large Learning Rates". Please check the paper for details.  See the paper "Cyclical Learning Rates for Training Neural Networks" at https://arxiv.org/pdf/1506.01186.pdf for instructions on implementing cyclical learning rates in Caffe.
 
 Note: if you have a better theoretical understanding of the cause for super-convergence than the ones described in the paper, please contact leslie.smith@nrl.navy.mil about a collaboration on a follow up paper.
 
