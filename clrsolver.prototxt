@@ -1,14 +1,14 @@
-net: "examples/superconvergence/architectures/arch.prototxt"
-#net: "examples/superconvergence/architectures/Resnet56Cifar.prototxt"
-#net: "examples/superconvergence/architectures/Resnet56Dropout.prototxt"
-#net: "examples/superconvergence/architectures/Resnet56Cifar-mod.prototxt"
-#net: "examples/superconvergence/architectures/Resnet56Cifar_changeBatchNorm.prototxt"
-#net: "examples/superconvergence/architectures/Resnet56Cifar_changePooling.prototxt"
-#net: "examples/superconvergence/architectures/bottleneckResnet56.prototxt"
-#net: "examples/superconvergence/architectures/Resnet20Cifar.prototxt"
-#net: "examples/superconvergence/architectures/resnet20bn.prototxt"
-#net: "examples/superconvergence/architectures/ResNeXt56.prototxt"
-#net: "examples/superconvergence/architectures/Resnet20Cifar.prototxt"
+net: "examples/sc/architectures/arch.prototxt"
+#net: "examples/sc/architectures/Resnet56Cifar.prototxt"
+#net: "examples/sc/architectures/Resnet56Dropout.prototxt"
+#net: "examples/sc/architectures/Resnet56Cifar-mod.prototxt"
+#net: "examples/sc/architectures/Resnet56Cifar_changeBatchNorm.prototxt"
+#net: "examples/sc/architectures/Resnet56Cifar_changePooling.prototxt"
+#net: "examples/sc/architectures/bottleneckResnet56.prototxt"
+#net: "examples/sc/architectures/Resnet20Cifar.prototxt"
+#net: "examples/sc/architectures/resnet20bn.prototxt"
+#net: "examples/sc/architectures/ResNeXt56.prototxt"
+#net: "examples/sc/architectures/Resnet20Cifar.prototxt"
 #
 test_iter: 200
 test_interval: 100
@@ -19,7 +19,7 @@ max_lr:  3.0
 stepsize: 5000
 max_iter: 10000 
 snapshot: 20000
-snapshot_prefix: "examples/superconvergence/snapshots/fig1a"
+snapshot_prefix: "examples/sc/snapshots/fig1a"
 solver_mode: GPU
 weight_decay: 1e-4
 momentum: 0.9

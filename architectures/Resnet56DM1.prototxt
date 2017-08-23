@@ -50,7 +50,7 @@ layer { # pre_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 16
@@ -144,7 +144,7 @@ layer { # L1_b1_cbr1_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 16
@@ -218,15 +218,6 @@ layer { # L1_b1_cbr1_scale
     bias_term: true
   }
 }
-layer { # L1_b1_cbr1_dropout
-  name: "L1_b1_cbr1_dropout"
-  type: "Dropout"
-  bottom: "L1_b1_cbr1_bn_top"
-  top: "L1_b1_cbr1_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 layer { # L1_b1_cbr1_relu
   name: "L1_b1_cbr1_relu"
   type: "ReLU"
@@ -246,7 +237,7 @@ layer { # L1_b1_cbr2_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 16
@@ -320,15 +311,6 @@ layer { # L1_b1_cbr2_scale
     bias_term: true
   }
 }
-layer { # L1_b1_cbr2_dropout
-  name: "L1_b1_cbr2_dropout"
-  type: "Dropout"
-  bottom: "L1_b1_cbr2_bn_top"
-  top: "L1_b1_cbr2_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 #} L1_b1_cbr2 end
 layer { # L1_b1_sum_eltwise
   name: "L1_b1_sum_eltwise"
@@ -360,7 +342,7 @@ layer { # L1_b2_cbr1_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 16
@@ -434,15 +416,6 @@ layer { # L1_b2_cbr1_scale
     bias_term: true
   }
 }
-layer { # L1_b2_cbr1_dropout
-  name: "L1_b2_cbr1_dropout"
-  type: "Dropout"
-  bottom: "L1_b2_cbr1_bn_top"
-  top: "L1_b2_cbr1_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 layer { # L1_b2_cbr1_relu
   name: "L1_b2_cbr1_relu"
   type: "ReLU"
@@ -462,7 +435,7 @@ layer { # L1_b2_cbr2_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 16
@@ -536,15 +509,6 @@ layer { # L1_b2_cbr2_scale
     bias_term: true
   }
 }
-layer { # L1_b2_cbr2_dropout
-  name: "L1_b2_cbr2_dropout"
-  type: "Dropout"
-  bottom: "L1_b2_cbr2_bn_top"
-  top: "L1_b2_cbr2_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 #} L1_b2_cbr2 end
 layer { # L1_b2_sum_eltwise
   name: "L1_b2_sum_eltwise"
@@ -576,7 +540,7 @@ layer { # L1_b3_cbr1_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 16
@@ -650,15 +614,6 @@ layer { # L1_b3_cbr1_scale
     bias_term: true
   }
 }
-layer { # L1_b3_cbr1_dropout
-  name: "L1_b3_cbr1_dropout"
-  type: "Dropout"
-  bottom: "L1_b3_cbr1_bn_top"
-  top: "L1_b3_cbr1_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 layer { # L1_b3_cbr1_relu
   name: "L1_b3_cbr1_relu"
   type: "ReLU"
@@ -678,7 +633,7 @@ layer { # L1_b3_cbr2_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 16
@@ -752,15 +707,6 @@ layer { # L1_b3_cbr2_scale
     bias_term: true
   }
 }
-layer { # L1_b3_cbr2_dropout
-  name: "L1_b3_cbr2_dropout"
-  type: "Dropout"
-  bottom: "L1_b3_cbr2_bn_top"
-  top: "L1_b3_cbr2_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 #} L1_b3_cbr2 end
 layer { # L1_b3_sum_eltwise
   name: "L1_b3_sum_eltwise"
@@ -792,7 +738,7 @@ layer { # L1_b4_cbr1_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 16
@@ -866,15 +812,6 @@ layer { # L1_b4_cbr1_scale
     bias_term: true
   }
 }
-layer { # L1_b4_cbr1_dropout
-  name: "L1_b4_cbr1_dropout"
-  type: "Dropout"
-  bottom: "L1_b4_cbr1_bn_top"
-  top: "L1_b4_cbr1_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 layer { # L1_b4_cbr1_relu
   name: "L1_b4_cbr1_relu"
   type: "ReLU"
@@ -894,7 +831,7 @@ layer { # L1_b4_cbr2_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 16
@@ -968,15 +905,6 @@ layer { # L1_b4_cbr2_scale
     bias_term: true
   }
 }
-layer { # L1_b4_cbr2_dropout
-  name: "L1_b4_cbr2_dropout"
-  type: "Dropout"
-  bottom: "L1_b4_cbr2_bn_top"
-  top: "L1_b4_cbr2_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 #} L1_b4_cbr2 end
 layer { # L1_b4_sum_eltwise
   name: "L1_b4_sum_eltwise"
@@ -1008,7 +936,7 @@ layer { # L1_b5_cbr1_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 16
@@ -1082,15 +1010,6 @@ layer { # L1_b5_cbr1_scale
     bias_term: true
   }
 }
-layer { # L1_b5_cbr1_dropout
-  name: "L1_b5_cbr1_dropout"
-  type: "Dropout"
-  bottom: "L1_b5_cbr1_bn_top"
-  top: "L1_b5_cbr1_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 layer { # L1_b5_cbr1_relu
   name: "L1_b5_cbr1_relu"
   type: "ReLU"
@@ -1110,7 +1029,7 @@ layer { # L1_b5_cbr2_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 16
@@ -1184,15 +1103,6 @@ layer { # L1_b5_cbr2_scale
     bias_term: true
   }
 }
-layer { # L1_b5_cbr2_dropout
-  name: "L1_b5_cbr2_dropout"
-  type: "Dropout"
-  bottom: "L1_b5_cbr2_bn_top"
-  top: "L1_b5_cbr2_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 #} L1_b5_cbr2 end
 layer { # L1_b5_sum_eltwise
   name: "L1_b5_sum_eltwise"
@@ -1224,7 +1134,7 @@ layer { # L1_b6_cbr1_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 16
@@ -1298,15 +1208,6 @@ layer { # L1_b6_cbr1_scale
     bias_term: true
   }
 }
-layer { # L1_b6_cbr1_dropout
-  name: "L1_b6_cbr1_dropout"
-  type: "Dropout"
-  bottom: "L1_b6_cbr1_bn_top"
-  top: "L1_b6_cbr1_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 layer { # L1_b6_cbr1_relu
   name: "L1_b6_cbr1_relu"
   type: "ReLU"
@@ -1326,7 +1227,7 @@ layer { # L1_b6_cbr2_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 16
@@ -1400,15 +1301,6 @@ layer { # L1_b6_cbr2_scale
     bias_term: true
   }
 }
-layer { # L1_b6_cbr2_dropout
-  name: "L1_b6_cbr2_dropout"
-  type: "Dropout"
-  bottom: "L1_b6_cbr2_bn_top"
-  top: "L1_b6_cbr2_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 #} L1_b6_cbr2 end
 layer { # L1_b6_sum_eltwise
   name: "L1_b6_sum_eltwise"
@@ -1440,7 +1332,7 @@ layer { # L1_b7_cbr1_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 16
@@ -1514,15 +1406,6 @@ layer { # L1_b7_cbr1_scale
     bias_term: true
   }
 }
-layer { # L1_b7_cbr1_dropout
-  name: "L1_b7_cbr1_dropout"
-  type: "Dropout"
-  bottom: "L1_b7_cbr1_bn_top"
-  top: "L1_b7_cbr1_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 layer { # L1_b7_cbr1_relu
   name: "L1_b7_cbr1_relu"
   type: "ReLU"
@@ -1542,7 +1425,7 @@ layer { # L1_b7_cbr2_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 16
@@ -1616,15 +1499,6 @@ layer { # L1_b7_cbr2_scale
     bias_term: true
   }
 }
-layer { # L1_b7_cbr2_dropout
-  name: "L1_b7_cbr2_dropout"
-  type: "Dropout"
-  bottom: "L1_b7_cbr2_bn_top"
-  top: "L1_b7_cbr2_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 #} L1_b7_cbr2 end
 layer { # L1_b7_sum_eltwise
   name: "L1_b7_sum_eltwise"
@@ -1656,7 +1530,7 @@ layer { # L1_b8_cbr1_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 16
@@ -1730,15 +1604,6 @@ layer { # L1_b8_cbr1_scale
     bias_term: true
   }
 }
-layer { # L1_b8_cbr1_dropout
-  name: "L1_b8_cbr1_dropout"
-  type: "Dropout"
-  bottom: "L1_b8_cbr1_bn_top"
-  top: "L1_b8_cbr1_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 layer { # L1_b8_cbr1_relu
   name: "L1_b8_cbr1_relu"
   type: "ReLU"
@@ -1758,7 +1623,7 @@ layer { # L1_b8_cbr2_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 16
@@ -1832,15 +1697,6 @@ layer { # L1_b8_cbr2_scale
     bias_term: true
   }
 }
-layer { # L1_b8_cbr2_dropout
-  name: "L1_b8_cbr2_dropout"
-  type: "Dropout"
-  bottom: "L1_b8_cbr2_bn_top"
-  top: "L1_b8_cbr2_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 #} L1_b8_cbr2 end
 layer { # L1_b8_sum_eltwise
   name: "L1_b8_sum_eltwise"
@@ -1872,7 +1728,7 @@ layer { # L1_b9_cbr1_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 16
@@ -1946,15 +1802,6 @@ layer { # L1_b9_cbr1_scale
     bias_term: true
   }
 }
-layer { # L1_b9_cbr1_dropout
-  name: "L1_b9_cbr1_dropout"
-  type: "Dropout"
-  bottom: "L1_b9_cbr1_bn_top"
-  top: "L1_b9_cbr1_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 layer { # L1_b9_cbr1_relu
   name: "L1_b9_cbr1_relu"
   type: "ReLU"
@@ -1974,7 +1821,7 @@ layer { # L1_b9_cbr2_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 16
@@ -2048,15 +1895,6 @@ layer { # L1_b9_cbr2_scale
     bias_term: true
   }
 }
-layer { # L1_b9_cbr2_dropout
-  name: "L1_b9_cbr2_dropout"
-  type: "Dropout"
-  bottom: "L1_b9_cbr2_bn_top"
-  top: "L1_b9_cbr2_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 #} L1_b9_cbr2 end
 layer { # L1_b9_sum_eltwise
   name: "L1_b9_sum_eltwise"
@@ -2090,7 +1928,7 @@ layer { # L2_b1_cbr1_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 16
@@ -2164,15 +2002,6 @@ layer { # L2_b1_cbr1_scale
     bias_term: true
   }
 }
-layer { # L2_b1_cbr1_dropout
-  name: "L2_b1_cbr1_dropout"
-  type: "Dropout"
-  bottom: "L2_b1_cbr1_bn_top"
-  top: "L2_b1_cbr1_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 layer { # L2_b1_cbr1_relu
   name: "L2_b1_cbr1_relu"
   type: "ReLU"
@@ -2192,7 +2021,7 @@ layer { # L2_b1_cbr2_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 16
@@ -2266,15 +2095,6 @@ layer { # L2_b1_cbr2_scale
     bias_term: true
   }
 }
-layer { # L2_b1_cbr2_dropout
-  name: "L2_b1_cbr2_dropout"
-  type: "Dropout"
-  bottom: "L2_b1_cbr2_bn_top"
-  top: "L2_b1_cbr2_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 #} L2_b1_cbr2 end
 layer { # L2_b1_pool
   name: "L2_b1_pool"
@@ -2339,7 +2159,7 @@ layer { # L2_b2_cbr1_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 32
@@ -2413,15 +2233,6 @@ layer { # L2_b2_cbr1_scale
     bias_term: true
   }
 }
-layer { # L2_b2_cbr1_dropout
-  name: "L2_b2_cbr1_dropout"
-  type: "Dropout"
-  bottom: "L2_b2_cbr1_bn_top"
-  top: "L2_b2_cbr1_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 layer { # L2_b2_cbr1_relu
   name: "L2_b2_cbr1_relu"
   type: "ReLU"
@@ -2441,7 +2252,7 @@ layer { # L2_b2_cbr2_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 32
@@ -2515,15 +2326,6 @@ layer { # L2_b2_cbr2_scale
     bias_term: true
   }
 }
-layer { # L2_b2_cbr2_dropout
-  name: "L2_b2_cbr2_dropout"
-  type: "Dropout"
-  bottom: "L2_b2_cbr2_bn_top"
-  top: "L2_b2_cbr2_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 #} L2_b2_cbr2 end
 layer { # L2_b2_sum_eltwise
   name: "L2_b2_sum_eltwise"
@@ -2555,7 +2357,7 @@ layer { # L2_b3_cbr1_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 32
@@ -2629,15 +2431,6 @@ layer { # L2_b3_cbr1_scale
     bias_term: true
   }
 }
-layer { # L2_b3_cbr1_dropout
-  name: "L2_b3_cbr1_dropout"
-  type: "Dropout"
-  bottom: "L2_b3_cbr1_bn_top"
-  top: "L2_b3_cbr1_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 layer { # L2_b3_cbr1_relu
   name: "L2_b3_cbr1_relu"
   type: "ReLU"
@@ -2657,7 +2450,7 @@ layer { # L2_b3_cbr2_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 32
@@ -2731,15 +2524,6 @@ layer { # L2_b3_cbr2_scale
     bias_term: true
   }
 }
-layer { # L2_b3_cbr2_dropout
-  name: "L2_b3_cbr2_dropout"
-  type: "Dropout"
-  bottom: "L2_b3_cbr2_bn_top"
-  top: "L2_b3_cbr2_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 #} L2_b3_cbr2 end
 layer { # L2_b3_sum_eltwise
   name: "L2_b3_sum_eltwise"
@@ -2771,7 +2555,7 @@ layer { # L2_b4_cbr1_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 32
@@ -2845,15 +2629,6 @@ layer { # L2_b4_cbr1_scale
     bias_term: true
   }
 }
-layer { # L2_b4_cbr1_dropout
-  name: "L2_b4_cbr1_dropout"
-  type: "Dropout"
-  bottom: "L2_b4_cbr1_bn_top"
-  top: "L2_b4_cbr1_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 layer { # L2_b4_cbr1_relu
   name: "L2_b4_cbr1_relu"
   type: "ReLU"
@@ -2873,7 +2648,7 @@ layer { # L2_b4_cbr2_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 32
@@ -2947,15 +2722,6 @@ layer { # L2_b4_cbr2_scale
     bias_term: true
   }
 }
-layer { # L2_b4_cbr2_dropout
-  name: "L2_b4_cbr2_dropout"
-  type: "Dropout"
-  bottom: "L2_b4_cbr2_bn_top"
-  top: "L2_b4_cbr2_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 #} L2_b4_cbr2 end
 layer { # L2_b4_sum_eltwise
   name: "L2_b4_sum_eltwise"
@@ -2987,7 +2753,7 @@ layer { # L2_b5_cbr1_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 32
@@ -3061,15 +2827,6 @@ layer { # L2_b5_cbr1_scale
     bias_term: true
   }
 }
-layer { # L2_b5_cbr1_dropout
-  name: "L2_b5_cbr1_dropout"
-  type: "Dropout"
-  bottom: "L2_b5_cbr1_bn_top"
-  top: "L2_b5_cbr1_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 layer { # L2_b5_cbr1_relu
   name: "L2_b5_cbr1_relu"
   type: "ReLU"
@@ -3089,7 +2846,7 @@ layer { # L2_b5_cbr2_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 32
@@ -3163,15 +2920,6 @@ layer { # L2_b5_cbr2_scale
     bias_term: true
   }
 }
-layer { # L2_b5_cbr2_dropout
-  name: "L2_b5_cbr2_dropout"
-  type: "Dropout"
-  bottom: "L2_b5_cbr2_bn_top"
-  top: "L2_b5_cbr2_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 #} L2_b5_cbr2 end
 layer { # L2_b5_sum_eltwise
   name: "L2_b5_sum_eltwise"
@@ -3203,7 +2951,7 @@ layer { # L2_b6_cbr1_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 32
@@ -3277,15 +3025,6 @@ layer { # L2_b6_cbr1_scale
     bias_term: true
   }
 }
-layer { # L2_b6_cbr1_dropout
-  name: "L2_b6_cbr1_dropout"
-  type: "Dropout"
-  bottom: "L2_b6_cbr1_bn_top"
-  top: "L2_b6_cbr1_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 layer { # L2_b6_cbr1_relu
   name: "L2_b6_cbr1_relu"
   type: "ReLU"
@@ -3305,7 +3044,7 @@ layer { # L2_b6_cbr2_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 32
@@ -3379,15 +3118,6 @@ layer { # L2_b6_cbr2_scale
     bias_term: true
   }
 }
-layer { # L2_b6_cbr2_dropout
-  name: "L2_b6_cbr2_dropout"
-  type: "Dropout"
-  bottom: "L2_b6_cbr2_bn_top"
-  top: "L2_b6_cbr2_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 #} L2_b6_cbr2 end
 layer { # L2_b6_sum_eltwise
   name: "L2_b6_sum_eltwise"
@@ -3419,7 +3149,7 @@ layer { # L2_b7_cbr1_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 32
@@ -3493,15 +3223,6 @@ layer { # L2_b7_cbr1_scale
     bias_term: true
   }
 }
-layer { # L2_b7_cbr1_dropout
-  name: "L2_b7_cbr1_dropout"
-  type: "Dropout"
-  bottom: "L2_b7_cbr1_bn_top"
-  top: "L2_b7_cbr1_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 layer { # L2_b7_cbr1_relu
   name: "L2_b7_cbr1_relu"
   type: "ReLU"
@@ -3521,7 +3242,7 @@ layer { # L2_b7_cbr2_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 32
@@ -3595,15 +3316,6 @@ layer { # L2_b7_cbr2_scale
     bias_term: true
   }
 }
-layer { # L2_b7_cbr2_dropout
-  name: "L2_b7_cbr2_dropout"
-  type: "Dropout"
-  bottom: "L2_b7_cbr2_bn_top"
-  top: "L2_b7_cbr2_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 #} L2_b7_cbr2 end
 layer { # L2_b7_sum_eltwise
   name: "L2_b7_sum_eltwise"
@@ -3635,7 +3347,7 @@ layer { # L2_b8_cbr1_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 32
@@ -3709,15 +3421,6 @@ layer { # L2_b8_cbr1_scale
     bias_term: true
   }
 }
-layer { # L2_b8_cbr1_dropout
-  name: "L2_b8_cbr1_dropout"
-  type: "Dropout"
-  bottom: "L2_b8_cbr1_bn_top"
-  top: "L2_b8_cbr1_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 layer { # L2_b8_cbr1_relu
   name: "L2_b8_cbr1_relu"
   type: "ReLU"
@@ -3737,7 +3440,7 @@ layer { # L2_b8_cbr2_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 32
@@ -3811,15 +3514,6 @@ layer { # L2_b8_cbr2_scale
     bias_term: true
   }
 }
-layer { # L2_b8_cbr2_dropout
-  name: "L2_b8_cbr2_dropout"
-  type: "Dropout"
-  bottom: "L2_b8_cbr2_bn_top"
-  top: "L2_b8_cbr2_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 #} L2_b8_cbr2 end
 layer { # L2_b8_sum_eltwise
   name: "L2_b8_sum_eltwise"
@@ -3851,7 +3545,7 @@ layer { # L2_b9_cbr1_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 32
@@ -3925,15 +3619,6 @@ layer { # L2_b9_cbr1_scale
     bias_term: true
   }
 }
-layer { # L2_b9_cbr1_dropout
-  name: "L2_b9_cbr1_dropout"
-  type: "Dropout"
-  bottom: "L2_b9_cbr1_bn_top"
-  top: "L2_b9_cbr1_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 layer { # L2_b9_cbr1_relu
   name: "L2_b9_cbr1_relu"
   type: "ReLU"
@@ -3953,7 +3638,7 @@ layer { # L2_b9_cbr2_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 32
@@ -4027,15 +3712,6 @@ layer { # L2_b9_cbr2_scale
     bias_term: true
   }
 }
-layer { # L2_b9_cbr2_dropout
-  name: "L2_b9_cbr2_dropout"
-  type: "Dropout"
-  bottom: "L2_b9_cbr2_bn_top"
-  top: "L2_b9_cbr2_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 #} L2_b9_cbr2 end
 layer { # L2_b9_sum_eltwise
   name: "L2_b9_sum_eltwise"
@@ -4069,7 +3745,7 @@ layer { # L3_b1_cbr1_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 32
@@ -4143,15 +3819,6 @@ layer { # L3_b1_cbr1_scale
     bias_term: true
   }
 }
-layer { # L3_b1_cbr1_dropout
-  name: "L3_b1_cbr1_dropout"
-  type: "Dropout"
-  bottom: "L3_b1_cbr1_bn_top"
-  top: "L3_b1_cbr1_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 layer { # L3_b1_cbr1_relu
   name: "L3_b1_cbr1_relu"
   type: "ReLU"
@@ -4171,7 +3838,7 @@ layer { # L3_b1_cbr2_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 32
@@ -4245,15 +3912,6 @@ layer { # L3_b1_cbr2_scale
     bias_term: true
   }
 }
-layer { # L3_b1_cbr2_dropout
-  name: "L3_b1_cbr2_dropout"
-  type: "Dropout"
-  bottom: "L3_b1_cbr2_bn_top"
-  top: "L3_b1_cbr2_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 #} L3_b1_cbr2 end
 layer { # L3_b1_pool
   name: "L3_b1_pool"
@@ -4318,7 +3976,7 @@ layer { # L3_b2_cbr1_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 64
@@ -4392,15 +4050,6 @@ layer { # L3_b2_cbr1_scale
     bias_term: true
   }
 }
-layer { # L3_b2_cbr1_dropout
-  name: "L3_b2_cbr1_dropout"
-  type: "Dropout"
-  bottom: "L3_b2_cbr1_bn_top"
-  top: "L3_b2_cbr1_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 layer { # L3_b2_cbr1_relu
   name: "L3_b2_cbr1_relu"
   type: "ReLU"
@@ -4420,7 +4069,7 @@ layer { # L3_b2_cbr2_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 64
@@ -4494,15 +4143,6 @@ layer { # L3_b2_cbr2_scale
     bias_term: true
   }
 }
-layer { # L3_b2_cbr2_dropout
-  name: "L3_b2_cbr2_dropout"
-  type: "Dropout"
-  bottom: "L3_b2_cbr2_bn_top"
-  top: "L3_b2_cbr2_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 #} L3_b2_cbr2 end
 layer { # L3_b2_sum_eltwise
   name: "L3_b2_sum_eltwise"
@@ -4534,7 +4174,7 @@ layer { # L3_b3_cbr1_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 64
@@ -4608,15 +4248,6 @@ layer { # L3_b3_cbr1_scale
     bias_term: true
   }
 }
-layer { # L3_b3_cbr1_dropout
-  name: "L3_b3_cbr1_dropout"
-  type: "Dropout"
-  bottom: "L3_b3_cbr1_bn_top"
-  top: "L3_b3_cbr1_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 layer { # L3_b3_cbr1_relu
   name: "L3_b3_cbr1_relu"
   type: "ReLU"
@@ -4636,7 +4267,7 @@ layer { # L3_b3_cbr2_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 64
@@ -4710,15 +4341,6 @@ layer { # L3_b3_cbr2_scale
     bias_term: true
   }
 }
-layer { # L3_b3_cbr2_dropout
-  name: "L3_b3_cbr2_dropout"
-  type: "Dropout"
-  bottom: "L3_b3_cbr2_bn_top"
-  top: "L3_b3_cbr2_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 #} L3_b3_cbr2 end
 layer { # L3_b3_sum_eltwise
   name: "L3_b3_sum_eltwise"
@@ -4750,7 +4372,7 @@ layer { # L3_b4_cbr1_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 64
@@ -4824,15 +4446,6 @@ layer { # L3_b4_cbr1_scale
     bias_term: true
   }
 }
-layer { # L3_b4_cbr1_dropout
-  name: "L3_b4_cbr1_dropout"
-  type: "Dropout"
-  bottom: "L3_b4_cbr1_bn_top"
-  top: "L3_b4_cbr1_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 layer { # L3_b4_cbr1_relu
   name: "L3_b4_cbr1_relu"
   type: "ReLU"
@@ -4852,7 +4465,7 @@ layer { # L3_b4_cbr2_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 64
@@ -4926,15 +4539,6 @@ layer { # L3_b4_cbr2_scale
     bias_term: true
   }
 }
-layer { # L3_b4_cbr2_dropout
-  name: "L3_b4_cbr2_dropout"
-  type: "Dropout"
-  bottom: "L3_b4_cbr2_bn_top"
-  top: "L3_b4_cbr2_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 #} L3_b4_cbr2 end
 layer { # L3_b4_sum_eltwise
   name: "L3_b4_sum_eltwise"
@@ -4966,7 +4570,7 @@ layer { # L3_b5_cbr1_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 64
@@ -5040,15 +4644,6 @@ layer { # L3_b5_cbr1_scale
     bias_term: true
   }
 }
-layer { # L3_b5_cbr1_dropout
-  name: "L3_b5_cbr1_dropout"
-  type: "Dropout"
-  bottom: "L3_b5_cbr1_bn_top"
-  top: "L3_b5_cbr1_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 layer { # L3_b5_cbr1_relu
   name: "L3_b5_cbr1_relu"
   type: "ReLU"
@@ -5068,7 +4663,7 @@ layer { # L3_b5_cbr2_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 64
@@ -5142,15 +4737,6 @@ layer { # L3_b5_cbr2_scale
     bias_term: true
   }
 }
-layer { # L3_b5_cbr2_dropout
-  name: "L3_b5_cbr2_dropout"
-  type: "Dropout"
-  bottom: "L3_b5_cbr2_bn_top"
-  top: "L3_b5_cbr2_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 #} L3_b5_cbr2 end
 layer { # L3_b5_sum_eltwise
   name: "L3_b5_sum_eltwise"
@@ -5182,7 +4768,7 @@ layer { # L3_b6_cbr1_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 64
@@ -5256,15 +4842,6 @@ layer { # L3_b6_cbr1_scale
     bias_term: true
   }
 }
-layer { # L3_b6_cbr1_dropout
-  name: "L3_b6_cbr1_dropout"
-  type: "Dropout"
-  bottom: "L3_b6_cbr1_bn_top"
-  top: "L3_b6_cbr1_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 layer { # L3_b6_cbr1_relu
   name: "L3_b6_cbr1_relu"
   type: "ReLU"
@@ -5284,7 +4861,7 @@ layer { # L3_b6_cbr2_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 64
@@ -5358,15 +4935,6 @@ layer { # L3_b6_cbr2_scale
     bias_term: true
   }
 }
-layer { # L3_b6_cbr2_dropout
-  name: "L3_b6_cbr2_dropout"
-  type: "Dropout"
-  bottom: "L3_b6_cbr2_bn_top"
-  top: "L3_b6_cbr2_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 #} L3_b6_cbr2 end
 layer { # L3_b6_sum_eltwise
   name: "L3_b6_sum_eltwise"
@@ -5398,7 +4966,7 @@ layer { # L3_b7_cbr1_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 64
@@ -5472,15 +5040,6 @@ layer { # L3_b7_cbr1_scale
     bias_term: true
   }
 }
-layer { # L3_b7_cbr1_dropout
-  name: "L3_b7_cbr1_dropout"
-  type: "Dropout"
-  bottom: "L3_b7_cbr1_bn_top"
-  top: "L3_b7_cbr1_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 layer { # L3_b7_cbr1_relu
   name: "L3_b7_cbr1_relu"
   type: "ReLU"
@@ -5500,7 +5059,7 @@ layer { # L3_b7_cbr2_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 64
@@ -5574,15 +5133,6 @@ layer { # L3_b7_cbr2_scale
     bias_term: true
   }
 }
-layer { # L3_b7_cbr2_dropout
-  name: "L3_b7_cbr2_dropout"
-  type: "Dropout"
-  bottom: "L3_b7_cbr2_bn_top"
-  top: "L3_b7_cbr2_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 #} L3_b7_cbr2 end
 layer { # L3_b7_sum_eltwise
   name: "L3_b7_sum_eltwise"
@@ -5614,7 +5164,7 @@ layer { # L3_b8_cbr1_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 64
@@ -5688,15 +5238,6 @@ layer { # L3_b8_cbr1_scale
     bias_term: true
   }
 }
-layer { # L3_b8_cbr1_dropout
-  name: "L3_b8_cbr1_dropout"
-  type: "Dropout"
-  bottom: "L3_b8_cbr1_bn_top"
-  top: "L3_b8_cbr1_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 layer { # L3_b8_cbr1_relu
   name: "L3_b8_cbr1_relu"
   type: "ReLU"
@@ -5716,7 +5257,7 @@ layer { # L3_b8_cbr2_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 64
@@ -5790,15 +5331,6 @@ layer { # L3_b8_cbr2_scale
     bias_term: true
   }
 }
-layer { # L3_b8_cbr2_dropout
-  name: "L3_b8_cbr2_dropout"
-  type: "Dropout"
-  bottom: "L3_b8_cbr2_bn_top"
-  top: "L3_b8_cbr2_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 #} L3_b8_cbr2 end
 layer { # L3_b8_sum_eltwise
   name: "L3_b8_sum_eltwise"
@@ -5830,7 +5362,7 @@ layer { # L3_b9_cbr1_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 64
@@ -5904,15 +5436,6 @@ layer { # L3_b9_cbr1_scale
     bias_term: true
   }
 }
-layer { # L3_b9_cbr1_dropout
-  name: "L3_b9_cbr1_dropout"
-  type: "Dropout"
-  bottom: "L3_b9_cbr1_bn_top"
-  top: "L3_b9_cbr1_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
-  }
-}
 layer { # L3_b9_cbr1_relu
   name: "L3_b9_cbr1_relu"
   type: "ReLU"
@@ -5932,7 +5455,7 @@ layer { # L3_b9_cbr2_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 0
+    decay_mult: 1
   }
   convolution_param {
     num_output: 64
@@ -6004,15 +5527,6 @@ layer { # L3_b9_cbr2_scale
   top: "L3_b9_cbr2_bn_top"
   scale_param {
     bias_term: true
-  }
-}
-layer { # L3_b9_cbr2_dropout
-  name: "L3_b9_cbr2_dropout"
-  type: "Dropout"
-  bottom: "L3_b9_cbr2_bn_top"
-  top: "L3_b9_cbr2_bn_top"
-  dropout_param {
-    dropout_ratio: 0.2
   }
 }
 #} L3_b9_cbr2 end

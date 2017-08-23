@@ -50,7 +50,7 @@ layer { # pre_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 1
+    decay_mult: 0
   }
   convolution_param {
     num_output: 16
@@ -144,7 +144,7 @@ layer { # L1_b1_cbr1_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 1
+    decay_mult: 0
   }
   convolution_param {
     num_output: 16
@@ -237,7 +237,7 @@ layer { # L1_b1_cbr2_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 1
+    decay_mult: 0
   }
   convolution_param {
     num_output: 16
@@ -342,7 +342,7 @@ layer { # L1_b2_cbr1_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 1
+    decay_mult: 0
   }
   convolution_param {
     num_output: 16
@@ -435,7 +435,7 @@ layer { # L1_b2_cbr2_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 1
+    decay_mult: 0
   }
   convolution_param {
     num_output: 16
@@ -540,7 +540,7 @@ layer { # L1_b3_cbr1_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 1
+    decay_mult: 0
   }
   convolution_param {
     num_output: 16
@@ -633,7 +633,7 @@ layer { # L1_b3_cbr2_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 1
+    decay_mult: 0
   }
   convolution_param {
     num_output: 16
@@ -740,7 +740,7 @@ layer { # L2_b1_cbr1_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 1
+    decay_mult: 0
   }
   convolution_param {
     num_output: 16
@@ -833,7 +833,7 @@ layer { # L2_b1_cbr2_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 1
+    decay_mult: 0
   }
   convolution_param {
     num_output: 16
@@ -971,7 +971,7 @@ layer { # L2_b2_cbr1_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 1
+    decay_mult: 0
   }
   convolution_param {
     num_output: 32
@@ -1064,7 +1064,7 @@ layer { # L2_b2_cbr2_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 1
+    decay_mult: 0
   }
   convolution_param {
     num_output: 32
@@ -1169,7 +1169,7 @@ layer { # L2_b3_cbr1_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 1
+    decay_mult: 0
   }
   convolution_param {
     num_output: 32
@@ -1262,7 +1262,7 @@ layer { # L2_b3_cbr2_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 1
+    decay_mult: 0
   }
   convolution_param {
     num_output: 32
@@ -1369,7 +1369,7 @@ layer { # L3_b1_cbr1_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 1
+    decay_mult: 0
   }
   convolution_param {
     num_output: 32
@@ -1462,7 +1462,7 @@ layer { # L3_b1_cbr2_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 1
+    decay_mult: 0
   }
   convolution_param {
     num_output: 32
@@ -1600,7 +1600,7 @@ layer { # L3_b2_cbr1_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 1
+    decay_mult: 0
   }
   convolution_param {
     num_output: 64
@@ -1693,7 +1693,7 @@ layer { # L3_b2_cbr2_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 1
+    decay_mult: 0
   }
   convolution_param {
     num_output: 64
@@ -1798,7 +1798,7 @@ layer { # L3_b3_cbr1_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 1
+    decay_mult: 0
   }
   convolution_param {
     num_output: 64
@@ -1891,7 +1891,7 @@ layer { # L3_b3_cbr2_conv
   }
   param {
     lr_mult: 2
-    decay_mult: 1
+    decay_mult: 0
   }
   convolution_param {
     num_output: 64
