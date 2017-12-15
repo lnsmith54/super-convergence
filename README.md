@@ -3,7 +3,8 @@
 Here are the Caffe files of our recent work: 
 Smith, Leslie N. and Nicholay Topin "Super-Convergence: Very Fast Training of Residual Networks Using Large Learning Rates"  arXiv preprint arXiv:1708.07120 (2017).  Please read the paper for details. In addition, see the paper "Cyclical Learning Rates for Training Neural Networks" at https://arxiv.org/pdf/1506.01186.pdf for instructions on implementing cyclical learning rates in Caffe.
 
-Note: if you have a better theoretical understanding of the cause for super-convergence than the ones described in the paper, please contact leslie.smith@nrl.navy.mil about a collaboration on a follow up paper.
+Note: I just uploaded the outputs from my own replication to the new results folder.  These outputs should be helpful references for replicating the figures in the paper.
+
 
 Instructions:
 
